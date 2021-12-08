@@ -1,0 +1,120 @@
+body{
+      margin: 0px;
+}
+
+#cabecera{
+      padding-top: 20px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-bottom: 20px;
+      display: grid;
+      grid-template-columns: 10% 80% 10%;
+      width: auto;      
+      background-color:#9ecae3;
+}
+
+#cabecera>#logoibm{      
+      text-align: center;
+      box-sizing: border-box;
+}
+#cabecera>#logoibm>a>img{
+      width: 100px;
+      padding: 7px;
+}
+
+#menu{
+      width: 100%;
+}
+
+#menu>#elementosmenu, #menu>ul>li>ul{
+      list-style: none;
+}
+#menu a{
+      text-decoration: none;
+      color: black;
+}
+
+#menu>#elementosmenu{
+      margin-top: 0px;
+      padding-left: 0px;
+      display:flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+}
+
+#menu>#elementosmenu>li{
+     text-align: center;   
+     margin-left: 10px;
+     margin-bottom: 10px;
+     width: 150px;
+     padding-top: 15px;
+     padding-bottom: 15px;
+     background-color:#6fadd3;
+     border-radius: 5px;
+
+}
+
+#menu>#elementosmenu>li:hover{
+      background-color:#4e8bb8;
+ }
+
+
+#menu>#elementosmenu>.desplegable>ul{
+      visibility: hidden;
+      display: none;
+}
+
+#menu>#elementosmenu>.desplegable:hover>ul{
+      visibility: visible;
+      display:block;
+      position: absolute;
+      margin-top: 10px;
+      padding-left:0px;
+      width:150px;
+      background-color:#4e8bb8;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+}
+.desplegable>ul>li{
+      margin-top: 10px;      
+      padding-top: 25px;
+      padding-bottom: 15px;
+}
+
+
+
+.desplegable>ul>li:hover{
+      background-color:#6fadd3;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+}
+
+      
+#cabecera>#login{
+      text-align: center;
+      width: 100%;
+}
+
+#cabecera>#login>a{
+      display: block;
+      text-align: center;
+}
+#cabecera>#login>a>img{
+      text-align: center;      
+      width:40px;
+}
+
+
+
+
+#contenedorprincipal{
+      background-color: black;
+}
+#contenidoprincipal>iframe{
+      width:99%;
+      min-height: 2000px;
+      height: auto;
+}
+
