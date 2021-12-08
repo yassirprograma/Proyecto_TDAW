@@ -29,6 +29,11 @@ body{
 #menu>#elementosmenu, #menu>ul>li>ul{
       list-style: none;
 }
+
+#menu div{
+      padding-top: 15px;
+      padding-bottom: 15px;
+}
 #menu a{
       text-decoration: none;
       color: black;
@@ -48,8 +53,8 @@ body{
      margin-left: 10px;
      margin-bottom: 10px;
      width: 150px;
-     padding-top: 15px;
-     padding-bottom: 15px;
+     /*padding-top: 15px;*/
+     /*padding-bottom: 15px;*/
      background-color:#6fadd3;
      border-radius: 5px;
 
@@ -69,7 +74,6 @@ body{
       visibility: visible;
       display:block;
       position: absolute;
-      margin-top: 10px;
       padding-left:0px;
       width:150px;
       background-color:#4e8bb8;
@@ -85,7 +89,7 @@ body{
 
 
 
-.desplegable>ul>li:hover{
+.desplegable>ul>li>:hover{
       background-color:#6fadd3;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;

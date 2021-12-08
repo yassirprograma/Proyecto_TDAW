@@ -14,48 +14,52 @@
                         <a href="./"><img src="./imagenesindex/IBMLOGO.png" alt="LOGO DE LA PÁGINA"></a>                        
                   </div>
 
+
                   <nav id="menu">
                         <ul id="elementosmenu">                         
                               <li class="desplegable"> 
-                                    Sobre IBM
+                                    <div>Sobre IBM</div>
+                                    
                                     <ul>
                                           <li>
-                                                <a href="./paginas/QueEsIBM/QueEsIBM.html" target="iframecontenido" >¿Qué es IBM?</a>
+                                                <a href="./paginas/QueEsIBM/QueEsIBM.html" target="iframecontenido" > <div>¿Qué es IBM?</div> </a>
                                           </li>
                                           <li>
-                                                <a href="./paginas/HistoriaIBM/HistoriaIBM.html" target="iframecontenido">Historia de IBM</a>
+                                                <a href="./paginas/HistoriaIBM/HistoriaIBM.html" target="iframecontenido"> <div>Historia de IBM</div> </a>
                                           </li>
                                     </ul>
                               </li>
 
                               <li>
-                                    <a href="./paginas/FAQ/FAQ.html" target="iframecontenido">FAQ</a>
+                                    <a href="./paginas/FAQ/FAQ.html" target="iframecontenido"><div>FAQ</div></a>
                               </li>
 
                               <li>
-                                    <a href="./paginas/ProductosServicios/ProductosServicios.html" target="iframecontenido">Productos y servicios</a>
+                                    <a href="./paginas/ProductosServicios/ProductosServicios.html" target="iframecontenido"><div>Productos y servicios</div></a>
                               </li>
 
                               <li class="desplegable">
-                                    IBM para estudiantes
-                                    <ul>
-                                          <li><a href="./paginas/OportunidadesEstudiantes/OportunidadesEstudiantes.html" target="iframecontenido">Oportunidades para estudiantes</a></li>
-                                          <li><a href="./paginas/Herramientas/Herramientas.html" target="iframecontenido">Herramientas</a></li>
-                                          <li><a href="./paginas/CapacitacionEducativo/CapacitacionEducativo.html" target="iframecontenido">Capacitación y contenido educativo</a></li>
-                                          <li><a href="./paginas/EscomIBM/EscomIBM.html" target="iframecontenido">ESCOM e IBM</a></li>
+                                    <div>IBM para estudiantes</div>
+                                    
+                                    <ul>                                    
+                                          <li><a href="./paginas/OportunidadesEstudiantes/OportunidadesEstudiantes.html" target="iframecontenido"><div>Oportunidades para estudiantes</div></a></li>
+                                          <li><a href="./paginas/Herramientas/Herramientas.html" target="iframecontenido"><div>Herramientas</div></a></li> 
+                                          <li><a href="./paginas/CapacitacionEducativo/CapacitacionEducativo.html" target="iframecontenido"><div>Capacitación y contenido educativo</div></a></li>
+                                          <li><a href="./paginas/EscomIBM/EscomIBM.html" target="iframecontenido"><div>ESCOM e IBM</div></a></li>
                                     </ul>
                               </li>
 
                               <li>
-                                    <a href="./paginas/EmpleoIBM/EmpleoIBM.html" target="iframecontenido">Empleo en IBM</a>
+                                    
+                                    <a href="./paginas/EmpleoIBM/EmpleoIBM.html" target="iframecontenido"><div>Empleo en IBM</div></a>
                               </li>
 
                               <li>
-                                    <a href="./paginas/ComunidadIBM/ComunidadIBM.php" target="iframecontenido">Comunidad IBM</a>
+                                    <a href="./paginas/ComunidadIBM/ComunidadIBM.php" target="iframecontenido"><div>Comunidad IBM</div></a>
                               </li>
 
                               <li>
-                                    <a href="./paginas/EventosIBM/EventosIBM.html" target="iframecontenido">Eventos IBM</a>
+                                    <a href="./paginas/EventosIBM/EventosIBM.html" target="iframecontenido"><div>Eventos IBM</div></a>
                               </li>
                                                                                           
                         </ul>                  
