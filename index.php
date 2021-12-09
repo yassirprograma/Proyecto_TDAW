@@ -2,7 +2,7 @@
 <html lang="es">
       <head>
             <meta charset="utf-8">
-            <title>Prueba formularios</title>
+            <title>IBM</title>
             <link rel="stylesheet" type="text/css" href="./estilosindex/estilo_index.css">
            
       </head>
@@ -92,28 +92,59 @@
 
 
 
-
-
             <div id="piedepagina">      
-                  <div id="DatosContacto">
-                  
+                  <div id="datoscontacto">
+                        
+                        <h3>Equipo 1 de desarrollo</h3>
+                        <h4>Datos de contacto</h4>                        
+                        <h4>Correo de contacto del equipo:</h4>
+                        <p>equipo1tdaw@gmail.com</p>
+                        
+                        <h4>Dirección</h4>      
+                        <p>ESCOM IPN, Unidad Profesional Adolfo López Mateos, 07320 Ciudad de México, CDMX</p>
+                        
+                        <h4>Teléfono de contacto</h4>
+                        
+                        <p>+52 55 3933 70 30</p>
+                        
+                        
                   </div>
+
 
                   <div id="logos">
-
+                        <img src="./imagenesindex/logo-ipn.png" alt="Logo del IPN">
+                        <img src="./imagenesindex/escudoESCOM.png" alt="Escudo de la ESCOM">                                                      
+                        <img src="./imagenesindex/logohtml.png" alt="Logo html">
+                        <img src="./imagenesindex/logocss.png" alt="Logo css">
+                        <img src="./imagenesindex/phplogo.png" alt="Logo html">                  
                   </div>
 
-                  <div id="enlaces">
 
+                  <div id="enlaces">  
+                        <h3>Visita nuestras redes sociales</h3> 
+                        <br>
+
+                        <div id="redessociales">
+                              <a href="https://www.facebook.com/escomipnmx/" target="_blank">
+                                    <img src="./imagenesindex/facelogo.svg" class="logoredsocial" alt="Logo facebook">
+                                    <p>Facebook</p>
+                              </a>                        
+                              <a href="https://www.linkedin.com/" target="_blank">
+                                    <img src="./imagenesindex/linkedinlogo.png" class="logoredsocial" alt="Logo Linkedin">
+                                    <p>Linkedin</p>
+                              </a>                        
+                              <a href="https://github.com/yassirprograma/Proyecto_TDAW" target="_blank">
+                                    <img src="./imagenesindex/githublogo.png" alt="Logo github">
+                                    <p>Repositorio Github</p>
+                              </a>                        
+                        </div>
+                        <br>
+                        <br>                        
+                        <a href="./paginas/EquipodeTrabajo/EquipodeTrabajo.html" target="_blank">Conoce más información sobre el equipo de trabajo</a>
+                        
                   </div>
 
             </div>
-
-
-
-
-
-
 
       </body>
 </html>

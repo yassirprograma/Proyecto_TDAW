@@ -1,17 +1,25 @@
+@font-face {
+      font-family: "Noto Sans";
+      src: url("../fuentes/Noto_Sans/NotoSans-Regular.ttf");
+}
+
 body{
       margin: 0px;
+      font-family: Noto Sans,arial,sans-serif;
 }
 
 #cabecera{
       padding-top: 20px;
       padding-left: 5px;
       padding-right: 5px;
-      padding-bottom: 20px;
+      padding-bottom: 5px;
       display: grid;
       grid-template-columns: 10% 80% 10%;
       width: auto;      
       background-color:#9ecae3;
 }
+
+
 
 #cabecera>#logoibm{      
       text-align: center;
@@ -19,27 +27,30 @@ body{
 }
 #cabecera>#logoibm>a>img{
       width: 100px;
-      padding: 7px;
+      padding-top: 2px;
+      padding-left: 17px;
+      padding-right: 7px;
+      padding-bottom: 2px;
 }
+
+
+
 
 #menu{
       width: 100%;
 }
 
-#menu>#elementosmenu, #menu>ul>li>ul{
+#menu>#elementosmenu, #menu>ul>li>ul{ /*para las propiedades de las listas y sublistas*/
       list-style: none;
 }
 
-#menu div{
-      padding-top: 15px;
-      padding-bottom: 15px;
-}
-#menu a{
+
+#menu a{ /*para los enlaces*/
       text-decoration: none;
       color: black;
 }
 
-#menu>#elementosmenu{
+#menu>#elementosmenu{ /*para el conjunto de todos los elementos del menú*/
       margin-top: 0px;
       padding-left: 0px;
       display:flex;
@@ -48,8 +59,9 @@ body{
       justify-content: center;
 }
 
-#menu>#elementosmenu>li{
+#menu>#elementosmenu>li{ /*para cada uno de los elementos del menú*/
      text-align: center;   
+     font-size: 14px;
      margin-left: 10px;
      margin-bottom: 10px;
      width: 150px;
@@ -60,7 +72,12 @@ body{
 
 }
 
-#menu>#elementosmenu>li:hover{
+#menu div{ /*para el div que tiene dentro el texto de cada elemento del menú*/
+      padding-top: 15px; /*se pone el padding para definir un área sensible del botón*/
+      padding-bottom: 15px; /*se pone el padding para definir un área sensible del botón*/
+}
+
+#menu>#elementosmenu>li:hover{ /*cuando se pone un botón encima del*/
       background-color:#4e8bb8;
  }
 
@@ -87,15 +104,18 @@ body{
       padding-bottom: 15px;
 }
 
-
-
-.desplegable>ul>li>:hover{
+.desplegable>ul>li:hover{
       background-color:#6fadd3;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
 }
 
-      
+
+
+
+
+
+
 #cabecera>#login{
       text-align: center;
       width: 100%;
@@ -113,12 +133,72 @@ body{
 
 
 
+
+
 #contenedorprincipal{
       background-color: black;
 }
 #contenidoprincipal>iframe{
-      width:99%;
+      width:100%;
       min-height: 2000px;
       height: auto;
+      border-width: 0px; /*quito el borde del iframe*/
 }
+
+
+#piedepagina{
+      background-color:#9ecae3 ;
+      display: grid;
+      grid-template-columns: 45% 10% 45%;
+      padding: 10px;      
+}
+
+#piedepagina>div{
+      /*
+      border-color: black;
+      border-style: solid;
+      border-width: 1px;
+      */
+      padding: 10px;
+}
+
+#piedepagina>#logos{
+      display:flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+}
+
+#logos>img{
+      width: 70%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      
+}
+
+
+#piedepagina>#datoscontacto, #piedepagina>#enlaces{
+      background-color: #6fadd385;     
+}
+
+#enlaces{
+      text-align: center;
+}
+#enlaces>#redessociales{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;      
+}
+#enlaces>#redessociales> a{
+      width: 30%;
+      text-decoration: none;
+      color: black;
+}
+#enlaces>#redessociales> a> img{      
+      width: 60%;
+
+}
+
 
