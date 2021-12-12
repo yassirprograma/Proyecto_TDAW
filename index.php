@@ -4,16 +4,28 @@
             <meta charset="utf-8">
             <title>IBM</title>
             <link rel="stylesheet" type="text/css" href="./estilosindex/estilo_index.css">
-           
+            <?php                  
+                  include("./funcioneseverywhere/funcionesHTML.php"); //INCUIMOS NUESTRA LIBRERÍA PARA PODER USARLA
+                  include("./funcioneseverywhere/milibreria.php"); //INCUIMOS NUESTRA LIBRERÍA PARA PODER USARLA
+            ?> 
       </head>
+
+      <?php            
+            session_start();  //siempre que se quiera hacer uso de la sesión se debe colocar este trozo
+            if(isset($_SESSION['username'])){ //para comprobar si ha iniciado sesión   
+                  $username=$_SESSION['username'];                              
+            }else {                 
+                  $username=0;  //si no hubo usuario, dejamos vacío
+            }
+            
+      ?>
 
       <body>
       
             <div id="cabecera" >
-                  <div id="logoibm">
+                  <div id="logoibm">                        
                         <a href="./"><img src="./imagenesindex/IBMLOGO.png" alt="LOGO DE LA PÁGINA"></a>                        
                   </div>
-
 
                   <nav id="menu">
                         <ul id="elementosmenu">                         
@@ -31,7 +43,7 @@
                               </li>
 
                               <li>
-                                    <a href="./paginas/FAQ/FAQ.html" target="iframecontenido"><div>FAQ</div></a>
+                                    <a href="./paginas/FAQ/FAQ.php" target="iframecontenido"><div>FAQ</div></a>
                               </li>
 
                               <li>
@@ -66,11 +78,27 @@
                   </nav>
 
                   <div id="login">
-                        <a id="botonlogin" href="./paginas/InicioSesion/InicioSesion.php">
-                              <img src="./imagenesindex/usericono.png" alt="icono de inicio de sesión"> 
-                              <br>
-                              Inicio de sesión
-                        </a>
+                        
+                              <?php
+                                    if($username!=0){                                          
+                                          echo'<a id="botonlogin" href="./"><img src="./imagenesindex/usericono.png" alt="icono de inicio de sesión">';                                          
+                                          echo "<br>";
+                                          echo $username;
+                                          echo "</a>";
+                                          echo "<br>";
+                                                                                    
+                                          echo'<a id="botonlogin" href="./paginas/Login/Logout.php"> Cerrar sesión </a>';                                          
+                                          
+                                    }else{            
+                                          
+                                          echo'<a id="botonlogin" href="./paginas/Login/Login.php">';                                                
+                                                echo '<img src="./imagenesindex/usericono.png" alt="icono de inicio de sesión">';                                          
+                                                echo"<br>Inicio de sesión";                                                                                    
+                                          echo "</a>";
+                                    }
+                              ?>
+                              
+                        
                   </div>
                   
                   
@@ -83,6 +111,7 @@
 
             <!--Aquí se manda el contenido principal-->
             <div id="contenidoprincipal">
+               
                   <iframe id="iframecontenido" name="iframecontenido" src="./paginas/IBMHome/IBMHome.html" >
 
                   </iframe>
@@ -95,8 +124,9 @@
             <div id="piedepagina">      
                   <div id="datoscontacto">
                         
-                        <h3>Equipo 1 de desarrollo</h3>
-                        <h4>Datos de contacto</h4>                        
+                        <h3>Equipo 1 de desarrollo</h3>                        
+                        <h3>Datos de contacto</h4>     
+                        <br>                                     
                         <h4>Correo de contacto del equipo:</h4>
                         <p>equipo1tdaw@gmail.com</p>
                         
