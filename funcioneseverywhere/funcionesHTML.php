@@ -1,4 +1,24 @@
 <?php
+
+function imprimeError($texto){ 
+      echo "<div class='errores'>";  
+                   echo "<h4 >".$texto."</h4>";                  
+      echo "</div>";      
+}
+
+function imprimeAceptacion($texto){
+      echo "<div class='aceptacion'>";  
+                  echo "<h4 >".$texto."</h4>";                  
+      echo "</div>";            
+}
+
+function imprimeWarning(){
+      echo "<div class='warning'>";  
+                  echo "<h4 >".$texto."</h4>";                  
+      echo "</div>"; 
+}
+
+
 function selectAutomaticoSimple($nombreArchivo,$separador, $nombreSelect, $elemdefault){
       echo "<select name='". $nombreSelect."'". "id='".$nombreSelect."'>" ;
 

@@ -1,0 +1,44 @@
+body{
+	height: 98vh;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.texto{
+
+	width: 10em;
+  	position: relative;
+  	left: 50%;
+  	top: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+
+.titulo{
+   text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 1em blue;
+   color: white;
+   font: 1.5em Georgia, "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
+}
+.capa{
+
+	height: 95%;
+}
+a{
+	padding: 1em;
+	padding-top: 0;
+}
+a:hover{
+	opacity:0.8;
+	
+}
+
+
+#hist{
+	background-image: url("../imagenes/IBM-H.jpg");
+}
+#mex{
+	background-image: url("../imagenes/ibm-méxico.png");
+}
+html{
+  background-color: #49647f;
+}

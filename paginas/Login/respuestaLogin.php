@@ -1,11 +1,12 @@
-<?php           
+<?php // session_start();  //este no debe ir, pues esta página va a ser cargada en Login.php y esa página ya tiene session start en el header
+
 $sehaenviadoformulario=0;        
 
 if(isset($_POST['submit'])){ //TODO LO SIGUIENTE  se ejecutará hasta que se de el botón de enviar
       $sehaenviadoformulario=1;        
 
       include("conectabd.php"); /*Esta función permite incluir código desde otro archivo */
-      include("milibreria.php"); //INCLUIMOS MI LIBRERIA DE FUNCIONES                                                          
+      include("../../funcioneseverywhere/milibreria.php"); //INCLUIMOS MI LIBRERIA DE FUNCIONES                                                          
       
 
       //estos usuarios los voy a crear para que puedan iniciar sesión los del equipo
@@ -18,21 +19,17 @@ if(isset($_POST['submit'])){ //TODO LO SIGUIENTE  se ejecutará hasta que se de 
       $u3="angelo";            
       $p3="tdaw3";
 
-      $u3="julio";            
-      $p3="tdaw4";
+      $u4="julio";            
+      $p4="tdaw4";
 
       $u=$_POST['username'];
       $p=$_POST['contra'];
       
 
-      if(($u1==$u && $p1==$p) ||($u2==$u && $p2==$p)||($u3==$u && $p3==$p) ||($u4==$u && $p4==$p)){ //si es alguno de los del equipo
-            
-            session_destroy(); //destruimos cualquier sesión que haya estado antes
-            session_start();                                                            
+      if(($u1==$u && $p1==$p) ||($u2==$u && $p2==$p)||($u3==$u && $p3==$p) ||($u4==$u && $p4==$p)){ //si es alguno de los del equipo                                    
             $_SESSION['username']=$u; //GUARDAMOS EL USUARIO EN LA SESIÓN Y APARTIR DE AHÍ YA SABEMOS QUIÉN ES, SIMPLEMENTE VIENDO EL ARCHIVO SESSION                                                                                          
-            $imprime="Bievenido ".$_SESSION['username'].("<br><br><a class='vuelve' href='../../index.php'>Click aquí para ir a HOME</a>");                                                                                         
+            $imprime="Bienvenido ".$_SESSION['username'].("<br><br><a class='vuelve' href='../../index.php'>Click aquí para ir a HOME</a>");                                                                                         
             imprimeAceptacion($imprime);   
-
 
       }else{                   
             $conexion=conecta_a_base("127.0.0.1:33065", "root", "holapapu", "sitiowebibm"); /*la base de datos en uso se llama "sitiowebibm"*/
@@ -57,9 +54,7 @@ if(isset($_POST['submit'])){ //TODO LO SIGUIENTE  se ejecutará hasta que se de 
                               $passwordenbase=$fila[1]; //guardamos la que viene de la base de datos
 
                               if(password_verify($passwordcapturada, $passwordenbase)){ //pero como le habíamos hecho algoritmo de hashing, debemos compararla con password_verify (función nativade php)                                                            
-                              // ini_set('sesion.gc_maxlifetime', 60*60*24); //establecemos el tiempo que queremos que dure una sesión, esto siempre va antes de generarla                              
-                                    session_destroy(); //destruimos cualquier sesión que haya estado antes
-                                    session_start();                                                            
+                              // ini_set('sesion.gc_maxlifetime', 60*60*24); //establecemos el tiempo que queremos que dure una sesión, esto siempre va antes de generarla                                                                                                                       
                                     $_SESSION['username']=$username; //GUARDAMOS EL USUARIO EN LA SESIÓN Y APARTIR DE AHÍ YA SABEMOS QUIÉN ES, SIMPLEMENTE VIENDO EL ARCHIVO SESSION                                                                                          
                                     $imprime="Bievenido ".$_SESSION['username'].("<br><br><a class='vuelve' href='../../index.php'>Click aquí para ir a HOME</a>");                                                                                         
                                     imprimeAceptacion($imprime);                                                 

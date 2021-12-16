@@ -1,13 +1,11 @@
 Kevin: Acabo de crear carpetas
-wey  cada página debe tener una carpeta especial para sus imagenes xD
-va
-No pedemos crear cada quien su estructura como quiera y simplemente lo ponemos en la carpeta de cada pagina? 
+¿donde?
 
-Mmm, pensé algo así, pero, estaría todo revuelto en esos lugares we,
-También cada página debe tener su hoja de estilos
+._.
+No eliminé nada we
+De que?
+¿de qué me estás diciendo?
+De nada, le cambie un selector del index, lo que pasa es que la altura del 
+iframe es muy alta en pixeles, le puse 100vh que es mas o menos la altura del monitor en la que se abra el recurso, asi se puede ver todo si tener que mover ambas barras de desplazamiento
 
-No sé
-Espera, deja ver un repositorio de una página para ver cómo manejan ese pedo
-ok
-Tienes razón we, creo que es mucho más fácil con la forma que dices
-apoco?
+sí bro, ya vi y ya la consideré 

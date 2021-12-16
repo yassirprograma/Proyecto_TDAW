@@ -1,0 +1,145 @@
+*{
+      font-family: "Noto Sans";
+      src: url("..../fuentes/Noto_Sans/NotoSans-Regular.ttf");
+}
+@font-face {
+      font-family: "Noto Sans";
+      src: url("..../fuentes/Noto_Sans/NotoSans-Regular.ttf");
+}
+
+body{
+      font-family: Noto Sans,arial,sans-serif;
+}
+#eqT{
+  text-align: justify;
+  background-color: #BFE0F3;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+#tit>h1{
+  text-align: justify;
+  background-color: #BFE0F3;
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+#tit{
+  background-color: #9ecae3;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 0.5em;
+}
+.info{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+#p1,#p2{
+  text-align: justify;
+  background-color: #BFE0F3;
+  margin: 0.5em;
+  padding: 2em;
+  border-radius: 0.5em;
+}
+.secc{
+  background-color: #9ecae3;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 0.5em;
+}
+hr{
+  margin-top: 2em;
+}
+#equ{
+  height: 100vh;
+}
+html{
+  height: 80vh;
+}
+/* On mouse-over, add a deeper shadow */
+.ficha:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the ficha contenedor */
+.contenedor {
+  padding: 2px 16px;
+}
+.ficha {
+  padding: 0.2em;
+  margin: 2em;
+  background-color: #BEE7FF;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+}
+a{
+  margin-bottom: 2em;
+  padding: 0.5em;
+}
+
+body{
+  height: 100%;
+}
+#cont{
+  text-align: justify;
+  background-color: #BFE0F3;
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 0.5em;
+  height: 80vh;
+  width: auto;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 25% 25% 25% 25% ;
+
+}
+.gira-ficha-delante>img{
+  width: 100%;
+  height: 100%;
+}
+.gira-ficha {
+  background-color:  #BEE7FF;
+  width: 99%;
+  height: 70%;
+  border: 1px solid  #BEE7FF;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This contenedor is needed to position the delante and atras side */
+.gira-ficha-pos {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal gira when you move the mouse over the gira box contenedor */
+.gira-ficha:hover .gira-ficha-pos {
+  transform: rotateY(180deg);
+}
+
+/* Position the delante and atras side */
+.gira-ficha-delante, .gira-ficha-atras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-atrasface-visibility: hidden; /* Safari */
+  atrasface-visibility: hidden;
+}
+
+/* Style the delante side (fallatras if image is missing) */
+.gira-ficha-delante {
+  background-color:  #BEE7FF;
+  color: black;
+}
+
+/* Style the atras side */
+.gira-ficha-atras {
+  text-align: left;
+  background-color: #D8EFFD;
+  color: black;
+  transform: rotateY(180deg);
+}

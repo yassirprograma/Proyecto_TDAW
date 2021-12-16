@@ -1,11 +1,10 @@
-
 <?php           
 $sehaenviadoformulario=0;        
 if(isset($_POST['submit'])){ //TODO LO SIGUIENTE  se ejecutará hasta que se de el botón de enviar
       $sehaenviadoformulario=1;        
 
-            include("conectabd.php"); /*Esta función permite incluir código desde otro archivo */
-            include("milibreria.php"); //INCLUIMOS MI LIBRERIA DE FUNCIONES                                                          
+            include("../../funcioneseverywhere/conectabd.php"); /*Esta función permite incluir código desde otro archivo */
+            include("../../funcioneseverywhere/milibreria.php"); //INCLUIMOS MI LIBRERIA DE FUNCIONES                                                          
       //GUARDAMOS EN VARIABLES
             $correo = $_POST['correo']; //campo requerido
             $username = $_POST['username']; //campo requerido
@@ -182,7 +181,7 @@ if(isset($_POST['submit'])){ //TODO LO SIGUIENTE  se ejecutará hasta que se de 
             }
 
             if(!es_alfabetica($apellidopaterno)){
-                  
+                  echo$apellidopaterno."<br>";
                   $errores=$errores+1;
                   if($errores==1){
                         echo "<div class='errores'>";

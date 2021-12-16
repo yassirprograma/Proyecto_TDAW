@@ -1,24 +1,35 @@
+<?php            
+session_start();  //siempre que se quiera usar una sesión en una página debe colocarse esto    hasta el principio sin dejar saltos de línea antes                    
+?>
+
 <!DOCTYPE html>
 <html lang="es">
       <head>
             <meta charset="utf-8">
             <title>Registro de usuario</title>
             <?php                  
-                  include("funcionesHTML.php"); //INCUIMOS NUESTRA LIBRERÍA PARA PODER USARLA
+                  include("../../funcioneseverywhere/funcionesHTML.php"); //INCUIMOS NUESTRA LIBRERÍA PARA PODER USARLA
             ?>
             <link rel="stylesheet" type="text/css" href="./estilos/estilos_formularioslogin.css">
       </head>
 
-      <?php            
-            session_start();  //siempre que se quiera usar una sesión en una página debe colocarse esto         
+  
+      <?php    
+      /* otra forma de redirigir, pero con javascript
+            echo "<script language=\"javascript\">
+            window.location.href=\"index.php\";
+            </script>";
+      */
+      
+
             if(isset($_SESSION['username'])){ //para comprobar si ha iniciado sesión   
                   $username=$_SESSION['username'];                              
-                  header('Location: ../../index.php'); //si ya tiene una sesión, lo regresamos al index
+                 // header('Location: ../../index.php'); //si ya tiene una sesión, lo regresamos al index
             }else {                 
-                  $username=0;  //si no hubo usuario, dejamos vacío
+                  $username="";  //si no hubo usuario, dejamos vacío
             }                        
-      ?>
-
+      ?>    
+   
 
       <body>         
             <div class="todo">

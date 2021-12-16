@@ -222,7 +222,7 @@
       
             $posfinal=strlen($cadena)-1;
             //pregmatch indica cuantas coincidencias de una expresión regular encuentra dentro de una cadena (debe coincidir la cadena completa, así como sus prefijos y sufijos)
-            if(preg_match_all("/([A-Za-zÇ-Ñ]|[[:space:]])+/", $cadena)==1 && preg_match_all("/([A-Za-zÇ-Ñ])+/", $cadena[0])==1  &&   preg_match_all("/([A-Za-zÇ-Ñ])+/", $cadena[$posfinal])==1 ){
+            if(preg_match_all("/([A-Za-zÇ-Ñ]|[[:space:]]|[ÁÉÍÓÚáéíóúü])+/", $cadena)==1 && preg_match_all("/([A-Za-zÇ-Ñ]|[ÁÉÍÓÚáéíóúü])+/", $cadena[0])==1  &&   preg_match_all("/([A-Za-zÇ-Ñ]|[ÁÉÍÓÚáéíóúü])+/", $cadena[$posfinal])==1 ){
                   
                   return 1; 
       

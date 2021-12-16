@@ -140,8 +140,10 @@ body{
 }
 #contenidoprincipal>iframe{
       width:100%;
-      min-height: 2000px;
-      height: auto;
+      min-height: 101vh;
+      
+      height:min-content ;
+      
       border-width: 0px; /*quito el borde del iframe*/
 }
 

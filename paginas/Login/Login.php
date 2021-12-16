@@ -1,23 +1,39 @@
+<?php            
+session_start(); 
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0"); 
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+header('Content-Type: text/html');
+?>
+
 <!DOCTYPE html>
 <html lang="es">
       <head>
             <meta charset="utf-8">
+            <meta http-equiv='cache-control' content='no-cache'>
+            <meta http-equiv='expires' content='0'> <!--para que tenga expiracions-->
+            <meta http-equiv='pragma' content='no-cache'>  
             <title>Inicio de sesión</title>    
             <link rel="stylesheet" type="text/css" href="./estilos/estilos_formularioslogin.css">     
             <?php                  
-                  include("funcionesHTML.php"); //INCUIMOS NUESTRA LIBRERÍA PARA PODER USARLA
-            ?>       
+                  include("../../funcioneseverywhere/funcionesHTML.php"); //INCUIMOS NUESTRA LIBRERÍA PARA PODER USARLA
+            ?>                
       </head>
 
-      <?php            
-            session_start();  //siempre que se quiera usar una sesión en una página debe colocarse esto         
+  
+      <?php    
+      /* otra forma de redirigir, pero con javascript
+            echo "<script language=\"javascript\">
+            window.location.href=\"index.php\";
+            </script>";
+      */
             if(isset($_SESSION['username'])){ //para comprobar si ha iniciado sesión   
                   $username=$_SESSION['username'];                              
-                  header('Location: ../../index.php'); //si ya tiene una sesión, lo regresamos al index
+                 // header('Location: ../../index.php'); //si ya tiene una sesión, lo regresamos al index
             }else {                 
-                  $username=0;  //si no hubo usuario, dejamos vacío
+                  $username="";  //si no hubo usuario, dejamos vacío
             }                        
-      ?>
+      ?>    
 
       <body>
       
@@ -47,7 +63,7 @@
                               <div class="campotext">
                                     <label for="username">Username </label>   
                                     <br>                                                               
-                                    <input type="text" id="username" name="username"  placeholder="Usuario" minlength="3" maxlength="15"  size="30" required>
+                                    <input value="" type="text" id="username" name="username"  placeholder="Usuario" minlength="3" maxlength="15"  size="30" required>
                               </div>
                         
                               <br>
@@ -55,7 +71,7 @@
                               <div class="campotext">
                                     <label for="contra">Contraseña</label>    
                                     <br>                                
-                                    <input type="password" id="contra" name="contra" placeholder=" "   maxlength="50" minlength="1" size="30" required>
+                                    <input value="" type="password" id="contra" name="contra" placeholder=" "   maxlength="50" minlength="1" size="30" required>
                               </div>           
                               
                               <br>

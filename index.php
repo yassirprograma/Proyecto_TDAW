@@ -1,3 +1,8 @@
+<?php            
+session_start();  //siempre que se quiera usar una sesión en una página debe colocarse esto    hasta el principio sin dejar saltos de línea antes                    
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
       <head>
@@ -10,15 +15,21 @@
             ?> 
       </head>
 
-      <?php            
-            session_start();  //siempre que se quiera hacer uso de la sesión se debe colocar este trozo
+      <?php    
+      /* otra forma de redirigir, pero con javascript
+            echo "<script language=\"javascript\">
+            window.location.href=\"index.php\";
+            </script>";
+      */
+      
+
             if(isset($_SESSION['username'])){ //para comprobar si ha iniciado sesión   
                   $username=$_SESSION['username'];                              
+                 // header('Location: ../../index.php'); //si ya tiene una sesión, lo regresamos al index
             }else {                 
-                  $username=0;  //si no hubo usuario, dejamos vacío
-            }
-            
-      ?>
+                  $username="";  //si no hubo usuario, dejamos vacío
+            }                        
+      ?>    
 
       <body>
       
@@ -43,7 +54,7 @@
                               </li>
 
                               <li>
-                                    <a href="./paginas/FAQ/FAQ.php" target="iframecontenido"><div>FAQ</div></a>
+                                    <a href="./paginas/FAQ/FAQ.html" target="iframecontenido"><div>FAQ</div></a>
                               </li>
 
                               <li>
@@ -80,10 +91,10 @@
                   <div id="login">
                         
                               <?php
-                                    if($username!=0){                                          
-                                          echo'<a id="botonlogin" href="./"><img src="./imagenesindex/usericono.png" alt="icono de inicio de sesión">';                                          
+                                    if($username!=""){                                          
+                                          echo'<a id="botonlogin" href="./paginas/PerfilUsuario/PerfilUsuario.php"><img src="./imagenesindex/usericono.png" alt="icono de inicio de sesión">';                                          
                                           echo "<br>";
-                                          echo $username;
+                                          echo $username; 
                                           echo "</a>";
                                           echo "<br>";
                                                                                     
